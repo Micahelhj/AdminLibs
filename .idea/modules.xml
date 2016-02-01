@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/AdminLibs.iml" filepath="$PROJECT_DIR$/AdminLibs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/adliber/adliber.iml" filepath="$PROJECT_DIR$/adliber/adliber.iml" />
+    </modules>
+  </component>
+</project>

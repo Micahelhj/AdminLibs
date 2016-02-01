@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <!-- 全局颜色 -->
+    <color name="cl_green">#00ff00</color>
+    <color name="cl_black">#000000</color>
+    <color name="cl_white">#FFFFFF</color>
+    <color name="cl_gray">#DDDDDD</color>
+    <color name="cl_lightBlue">#5BCFE1</color>
+    <color name="cl_Blue">#5BCFE1</color>
+    <color name="cl_Blue_sc">#068BF2</color>
+    <color name="cl_Gray">#969899</color>
+    <color name="cl_Yellow">#FFFF00</color>
+    <color name="cl_Red">#FF0000</color>
+    <color name="cl_transparent">#00000000</color>
+    <color name="cl_Orange">#FFc001</color>
+    <color name="cl_Grid">#FFF4F4F4</color>
+    <!---->
+    <!-- 下拉刷新变换颜色 -->
+    <color name="holo_blue_bright">#00DDFF</color>
+    <color name="holo_green_light">#99CC00</color>
+    <color name="holo_orange_light">#FFBB33</color>
+    <color name="holo_red_light">#FF4444</color>
+    <!-- 背景透明色 -->
+    <color name="white_bg00">#00FFFFFF</color>
+    <color name="white_bg20">#20FFFFFF</color>
+    <color name="white_bg30">#30FFFFFF</color>
+    <color name="white_bg40">#40FFFFFF</color>
+    <color name="white_bg50">#50FFFFFF</color>
+    <color name="white_bg60">#60FFFFFF</color>
+    <color name="white_bg70">#70FFFFFF</color>
+    <color name="white_bg80">#80FFFFFF</color>
+    <color name="white_bg90">#90FFFFFF</color>
+    <color name="white_bg99">#99FFFFFF</color>
+    <!---->
+    <color name="black_bg10">#10000000</color>
+    <color name="black_bg20">#20000000</color>
+    <color name="black_bg30">#30000000</color>
+    <color name="black_bg40">#40000000</color>
+    <color name="black_bg50">#50000000</color>
+    <color name="black_bg60">#60000000</color>
+    <color name="black_bg70">#70000000</color>
+    <color name="black_bg80">#80000000</color>
+    <color name="black_bg90">#90000000</color>
+    <!--进度框-->
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+    <color name="bgColor_overlay_black">#95000000</color>
+    <!--窗口背景颜色-->
+    <color name="bgColor_svprogressdefaultview">@android:color/white</color>
+    <!--标题颜色-->
+    <color name="textColor_svprogresshuddefault_msg">#000000</color>
+    <color name="roundColor_svprogresshuddefault">#e5e5e5</color>
+    <color name="roundProgressColor_svprogresshuddefault">@android:color/black</color>
+</resources>
