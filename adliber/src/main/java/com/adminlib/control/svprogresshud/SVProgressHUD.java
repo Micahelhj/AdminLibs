@@ -13,7 +13,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.FrameLayout;
 
-import com.adminlib.R;
+import com.adminlibs.R;
 
 /**
  * Created by Sai on 15/8/15.

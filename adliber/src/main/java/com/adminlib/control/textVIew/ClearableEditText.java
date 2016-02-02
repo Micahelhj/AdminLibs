@@ -11,7 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.EditText;
 
-import com.adminlib.R;
+import com.adminlibs.R;
 
 
 public class ClearableEditText extends EditText implements View.OnTouchListener, View.OnFocusChangeListener, TextWatcher {

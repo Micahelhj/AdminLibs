@@ -15,7 +15,7 @@ import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 
 
-import com.adminlib.R;
+import com.adminlibs.R;
 
 import java.io.Serializable;
 import java.util.ArrayList;

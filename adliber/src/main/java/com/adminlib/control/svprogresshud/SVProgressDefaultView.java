@@ -10,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.adminlib.R;
+import com.adminlibs.R;
 
 
 /**

@@ -2,7 +2,7 @@ package com.adminlib.control.svprogresshud;
 
 import android.view.Gravity;
 
-import com.adminlib.R;
+import com.adminlibs.R;
 
 
 /**

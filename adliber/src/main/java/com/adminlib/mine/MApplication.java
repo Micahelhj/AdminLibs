@@ -9,7 +9,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Toast;
 
-import com.adminlib.R;
+import com.adminlibs.R;
 import com.adminlib.utils.ABFileUtil;
 
 

@@ -16,7 +16,7 @@ import android.widget.PopupWindow;
 import android.widget.TextView;
 
 
-import com.adminlib.R;
+import com.adminlibs.R;
 import com.adminlib.utils.ABTextUtil;
 
 import java.io.Serializable;
