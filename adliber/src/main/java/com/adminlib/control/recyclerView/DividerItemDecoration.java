@@ -16,6 +16,7 @@ package com.adminlib.control.recyclerView;
  * limitations under the License.
  */
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Canvas;
@@ -67,9 +68,10 @@ public class DividerItemDecoration extends RecyclerView.ItemDecoration {
         mOrientation = orientation;
     }
 
+    @SuppressLint("LongLogTag")
     @Override
     public void onDraw(Canvas c, RecyclerView parent) {
-        Log.v("recyclerview - itemdecoration", "onDraw()");
+        Log.i("recyclerview - itemdecoration", "onDraw()");
         if (mOrientation == VERTICAL_LIST) {
             drawVertical(c, parent);
         } else {
