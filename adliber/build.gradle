@@ -10,8 +10,15 @@ android {
         versionName "1.0.0"
     }
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+        }
+        release {
+            //混淆,新版本是ninifyEnabled不再是runproguard
+            minifyEnabled false
+            //资源文件是否对齐
+            zipAlignEnabled true
+            //加载默认混淆配置文件及自定义混淆 配置
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -38,6 +45,5 @@ dependencies {
     compile 'com.nineoldandroids:library:2.4.0'
     compile 'com.android.support:appcompat-v7:23.1.1'
     compile 'com.android.support:recyclerview-v7:23.1.1'
-    compile project(':mutils')
 }
 apply from: 'bintray.gradle'

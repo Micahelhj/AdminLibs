@@ -1,4 +1,4 @@
-package com.mutils.encrypt;
+package com.adminlib.utils.encrypt;
 
 import java.io.UnsupportedEncodingException;
 

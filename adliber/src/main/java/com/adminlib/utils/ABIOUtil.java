@@ -1,4 +1,4 @@
-package com.mutils;
+package com.adminlib.utils;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
