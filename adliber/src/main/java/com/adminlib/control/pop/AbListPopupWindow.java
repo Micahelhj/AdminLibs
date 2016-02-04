@@ -17,7 +17,7 @@ import android.widget.TextView;
 
 
 import com.adminlibs.R;
-import com.adminlib.utils.ABTextUtil;
+import com.mutils.ABTextUtil;
 
 import java.io.Serializable;
 import java.util.ArrayList;
