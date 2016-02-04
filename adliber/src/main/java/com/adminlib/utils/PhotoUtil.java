@@ -59,17 +59,17 @@ public class PhotoUtil {
         return output;
     }
 
-    public static boolean saveToSDCard(Bitmap bitmap) {
+    public static boolean saveToSDCard(Bitmap bitmap, String fileDirsPath) {
         if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             return false;
         }
         FileOutputStream fileOutputStream = null;
-        File file = new File("/sdcard/KaiXin/Download/");
+        File file = new File(fileDirsPath);
         if (!file.exists()) {
             file.mkdirs();
         }
         String fileName = UUID.randomUUID().toString() + ".jpg";
-        String filePath = "/sdcard/KaiXin/Download/" + fileName;
+        String filePath = fileDirsPath + "/" + fileName;
         File f = new File(filePath);
         if (!f.exists()) {
             try {
@@ -96,17 +96,17 @@ public class PhotoUtil {
      * @param bm 保存的图片
      * @return 图片路径
      */
-    public static String saveToLocal(Bitmap bm) {
+    public static String saveToLocal(Bitmap bm, String fileDirsPath) {
         if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
             return null;
         }
         FileOutputStream fileOutputStream = null;
-        File file = new File("/sdcard/KaiXin/Images/");
+        File file = new File(fileDirsPath);
         if (!file.exists()) {
             file.mkdirs();
         }
         String fileName = UUID.randomUUID().toString() + ".jpg";
-        String filePath = "/sdcard/KaiXin/Images/" + fileName;
+        String filePath = fileDirsPath + "/" + fileName;
         File f = new File(filePath);
         if (!f.exists()) {
             try {
@@ -749,7 +749,6 @@ public class PhotoUtil {
             // return BitmapFactory.decodeFile(path, newOpts);
             return BitmapFactory.decodeResource(context.getResources(), id, newOpts);
         } catch (Exception e) {
-            // TODO: handle exception
             return null;
         }
     }
