@@ -17,7 +17,7 @@ package com.adminlib.utils;
 
 import java.security.MessageDigest;
 
-public class ABMd5 {
+public class ABMd5Util {
 
     /**
      * 描述：MD5加密.
@@ -25,7 +25,7 @@ public class ABMd5 {
      * @param str 要加密的字符串
      * @return String 加密的字符串
      */
-    public final static String MD5(String str) {
+    public final static String Encryption(String str) {
         char hexDigits[] = { // 用来将字节转换成 16 进制表示的字符
                 '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd',
                 'e', 'f'};
@@ -57,7 +57,7 @@ public class ABMd5 {
      * @param args the arguments
      */
     public static void main(String[] args) {
-        System.out.println(ABMd5.MD5("2011123456").toLowerCase());
+        System.out.println(ABMd5Util.Encryption("2011123456").toLowerCase());
     }
 
 }

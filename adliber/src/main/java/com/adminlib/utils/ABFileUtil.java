@@ -484,7 +484,7 @@ public class ABFileUtil {
         }
         String name = null;
         try {
-            name = ABMd5.MD5(url);
+            name = ABMd5Util.MD5(url);
         } catch (Exception e) {
             e.printStackTrace();
         }
