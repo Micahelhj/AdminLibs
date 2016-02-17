@@ -1,6 +1,7 @@
 package com.adminlib.widget;
 
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
@@ -15,6 +16,7 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.widget.CheckBox;
 
+import com.adminlibs.R;
 import com.adutils.ABLogUtil;
 
 
@@ -157,6 +159,7 @@ public class AbSlidingButton extends CheckBox {
         }
     };
 
+
     /**
      * Instantiates a new ab sliding button.
      *
@@ -164,7 +167,7 @@ public class AbSlidingButton extends CheckBox {
      */
     public AbSlidingButton(Context context) {
         super(context);
-        init(context);
+        init(context, null);
     }
 
     /**
@@ -175,7 +178,7 @@ public class AbSlidingButton extends CheckBox {
      */
     public AbSlidingButton(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init(context);
+        init(context, attrs);
     }
 
     /**
@@ -183,7 +186,7 @@ public class AbSlidingButton extends CheckBox {
      *
      * @param context the context
      */
-    private void init(Context context) {
+    private void init(Context context, AttributeSet attrs) {
         this.context = context;
         this.mAlpha = 255;
         this.isChecked = false;
@@ -191,26 +194,21 @@ public class AbSlidingButton extends CheckBox {
         this.mPaint.setColor(Color.WHITE);
         float density = getResources().getDisplayMetrics().density;
         this.mAnimatedVelocity = (int) (0.5F + 350.0F * density);
-    }
+        if (null != attrs) {
+            TypedArray arr = context.obtainStyledAttributes(attrs, R.styleable.AbSlidingButtonStyle);
+            try {
+                int btn_bottom = arr.getResourceId(R.styleable.AbSlidingButtonStyle_btn_bottom, -1);
+                int btn_frame = arr.getResourceId(R.styleable.AbSlidingButtonStyle_btn_frame, -1);
+                int btn_mask = arr.getResourceId(R.styleable.AbSlidingButtonStyle_btn_mask, -1);
+                int btn_unpressed = arr.getResourceId(R.styleable.AbSlidingButtonStyle_btn_unpressed, -1);
+                int btn_pressed = arr.getResourceId(R.styleable.AbSlidingButtonStyle_btn_pressed, -1);
+                if (btn_bottom == -1 || btn_frame == -1 || btn_mask == -1 || btn_unpressed == -1 || btn_pressed == -1)
+                    setImageResource(R.mipmap.btn_bottom1, R.mipmap.btn_frame, R.mipmap.btn_mask, R.mipmap.btn_unpressed, R.mipmap.btn_pressed);
+            } finally {
+                arr.recycle();
+            }
 
-    /*
-     * (non-Javadoc)
-     * @see android.widget.CompoundButton#onDraw(android.graphics.Canvas)
-     */
-    protected void onDraw(Canvas canvas) {
-        //设置一个透明度为255的图层
-        canvas.saveLayerAlpha(this.mSaveLayerRectF, this.mAlpha, Canvas.ALL_SAVE_FLAG);
-        if (btnMask != null) {
-            canvas.drawBitmap(this.btnMask, 0F, this.mExtendOffsetY, this.mPaint);
-            //混合绘制，取两层绘制交集。显示上层。btnBottom的长度超出btnMask的部分不绘制
-            this.mPaint.setXfermode(this.mXfermode);
-            canvas.drawBitmap(this.btnBottom, this.mRealPos, this.mExtendOffsetY, this.mPaint);
-            this.mPaint.setXfermode(null);
-            canvas.drawBitmap(this.btnFrame, 0F, this.mExtendOffsetY, this.mPaint);
-            if (mCurBtnPic != null)
-                canvas.drawBitmap(this.mCurBtnPic, this.mRealPos, 0.40000000596046448F + this.mExtendOffsetY, this.mPaint);
         }
-        canvas.restore();
     }
 
     /**
