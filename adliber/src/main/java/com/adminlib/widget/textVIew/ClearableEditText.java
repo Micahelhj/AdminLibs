@@ -1,4 +1,4 @@
-package com.adminlib.widget.textVIew;
+package com.adminlib.widget.textView;
 
 import android.content.Context;
 import android.graphics.drawable.Drawable;
