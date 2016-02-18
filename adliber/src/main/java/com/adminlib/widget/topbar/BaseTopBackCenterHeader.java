@@ -37,8 +37,6 @@ public abstract class BaseTopBackCenterHeader extends RelativeLayout {
                 this.setLeftTitle(leftTitle);
                 boolean leftShown = arr.getBoolean(R.styleable.BaseTopBackCenterHeader_headerShowLeft, false);
                 this.setLeftShown(leftShown);
-                boolean rightShown = !arr.getBoolean(R.styleable.BaseTopBackCenterHeader_headerHideLeft, false);
-                this.setRightShown(rightShown);
             } finally {
                 arr.recycle();
             }
@@ -56,7 +54,6 @@ public abstract class BaseTopBackCenterHeader extends RelativeLayout {
 
     public abstract void setLeftShown(boolean var1);
 
-    public abstract void setRightShown(boolean var1);
 
     abstract void initViews();
 }

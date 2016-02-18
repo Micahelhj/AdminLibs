@@ -13,6 +13,5 @@
         <attr name="headerTitleColor" format="color|reference" />
         <attr name="headerShowLeft" format="boolean" />
         <attr name="headerLeftTitle" format="reference|string" />
-        <attr name="headerHideLeft" format="boolean" />
     </declare-styleable>
 </resources>

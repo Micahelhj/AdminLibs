@@ -21,7 +21,7 @@ import com.adminlibs.R;
  * 修改备注：
  */
 public class TopTitleBackBar extends BaseTopBackCenterHeader {
-    private LinearLayout closeIv;
+    private LinearLayout closeLl;
     private TextView titleTv;
     private TextView leftTitleTv;
 
@@ -34,7 +34,7 @@ public class TopTitleBackBar extends BaseTopBackCenterHeader {
     }
 
     public void setCloseClickListener(OnClickListener onClickListener) {
-        closeIv.setOnClickListener(onClickListener);
+        closeLl.setOnClickListener(onClickListener);
     }
 
     public void setLeftClickListener(OnClickListener onClickListener) {
@@ -58,16 +58,13 @@ public class TopTitleBackBar extends BaseTopBackCenterHeader {
         leftTitleTv.setVisibility(shown ? View.VISIBLE : View.GONE);
     }
 
-    public void setRightShown(boolean shown) {
-        closeIv.setVisibility(shown ? View.VISIBLE : View.GONE);
-    }
 
     void initViews() {
         LayoutInflater.from(getContext()).inflate(R.layout.top_title_back, this);
-        closeIv = (LinearLayout) findViewById(R.id.back_lay);
+        closeLl = (LinearLayout) findViewById(R.id.back_lay);
         titleTv = (TextView) findViewById(R.id.tV_top_title);
         leftTitleTv = (TextView) findViewById(R.id.leftTitleTv);
-        closeIv.setOnClickListener(new OnClickListener() {
+        closeLl.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
                 if (getContext() instanceof Activity) {
                     ((Activity) getContext()).finish();
