@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/top_lay"
+    android:layout_width="match_parent"
+    android:layout_height="50dip"
+    android:background="@color/top_title_bg"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/back_lay"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/top_back_bg_select"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="15dp">
+
+        <ImageView
+            android:id="@+id/iV_top_back"
+            android:layout_width="30dip"
+            android:layout_height="25dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/top_back" />
+
+        <TextView
+            android:id="@+id/leftTitleTv"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textColor="@color/cl_white"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+    <com.adminlib.widget.textView.ScrollTextView
+        android:id="@+id/tV_top_title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_weight="1"
+        android:ellipsize="marquee"
+        android:gravity="center"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:paddingLeft="5dp"
+        android:singleLine="true"
+        android:textColor="#FFFFFF"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:background="@drawable/top_back_bg_select"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingRight="15dp"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="30dip"
+            android:layout_height="25dip"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/top_back" />
+
+        <TextView
+            android:id="@+id/rightTitleTv"
+            style="@style/text_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回"
+            android:textColor="@color/cl_white"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

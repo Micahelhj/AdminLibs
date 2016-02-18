@@ -53,4 +53,6 @@
     <color name="textColor_svprogresshuddefault_msg">#000000</color>
     <color name="roundColor_svprogresshuddefault">#e5e5e5</color>
     <color name="roundProgressColor_svprogresshuddefault">@android:color/black</color>
+    <!--top_title-->
+    <color name="top_title_bg">#065D93</color>
 </resources>

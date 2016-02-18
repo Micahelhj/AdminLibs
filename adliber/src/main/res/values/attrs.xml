@@ -7,4 +7,12 @@
         <attr name="btn_unpressed" format="integer|reference" />
         <attr name="btn_pressed" format="integer|reference" />
     </declare-styleable>
+
+    <declare-styleable name="BaseTopBackCenterHeader">
+        <attr name="headerTitle" format="reference|string" />
+        <attr name="headerTitleColor" format="color|reference" />
+        <attr name="headerShowLeft" format="boolean" />
+        <attr name="headerLeftTitle" format="reference|string" />
+        <attr name="headerHideLeft" format="boolean" />
+    </declare-styleable>
 </resources>
