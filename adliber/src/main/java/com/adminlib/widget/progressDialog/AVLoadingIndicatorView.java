@@ -45,6 +45,8 @@ import com.adminlibs.R;
 
 /**
  *
+ * //https://github.com/81813780/AVLoadingIndicatorView
+ *
  .BallPulse,
  .BallGridPulse,
  .BallClipRotate,
