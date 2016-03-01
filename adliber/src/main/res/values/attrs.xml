@@ -8,6 +8,11 @@
         <attr name="btn_pressed" format="integer|reference" />
     </declare-styleable>
 
+    <declare-styleable name="BaseDoTView">
+        <attr name="selected" format="integer|reference" />
+        <attr name="selectedIndicatorColor" format="color|reference" />
+        <attr name="UnselectedIndicatorColor" format="color|reference" />
+    </declare-styleable>
     <declare-styleable name="BaseTopBackCenterHeader">
         <attr name="headerTitle" format="reference|string" />
         <attr name="headerTitleColor" format="color|reference" />
