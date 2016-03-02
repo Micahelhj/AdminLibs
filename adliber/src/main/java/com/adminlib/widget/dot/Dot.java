@@ -30,13 +30,9 @@ public class Dot extends ImageView {
      */
     public static final int ALPHA = 255;
 
-    private float[] scaleFloats = new float[]{SCALE,
-            SCALE,
-            SCALE};
+    private float[] scaleFloats = new float[]{SCALE, SCALE, SCALE};
 
-    int[] alphas = new int[]{ALPHA,
-            ALPHA,
-            ALPHA,};
+    private int[] alphas = new int[]{ALPHA, ALPHA, ALPHA,};
 
     public Dot(Context context) {
         this(context, null);
