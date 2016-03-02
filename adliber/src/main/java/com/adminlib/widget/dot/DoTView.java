@@ -34,7 +34,7 @@ public class DoTView extends BaseDoTView {
     }
 
     @Override
-    void initViews() {
+    protected void initViews() {
         LayoutInflater.from(getContext()).inflate(R.layout.default_indicator, this);
     }
 

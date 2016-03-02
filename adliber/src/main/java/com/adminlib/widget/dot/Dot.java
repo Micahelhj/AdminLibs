@@ -25,7 +25,9 @@ public class Dot extends ImageView {
      * 放大放大倍数
      */
     public static final float SCALE = 1.0f;
-
+    /**
+     * 透明度
+     */
     public static final int ALPHA = 255;
 
     private float[] scaleFloats = new float[]{SCALE,
@@ -67,29 +69,26 @@ public class Dot extends ImageView {
     }
 
     /**
-     * 小圆半径
+     * Dot默认宽度或高度
      */
-    private int circleRadius;
+    private float defaultSize = 15;
 
-    public int getCircleRadius() {
-        return circleRadius;
-    }
-
-    public void setCircleRadius(int circleRadius) {
-        this.circleRadius = circleRadius;
+    /**
+     * 修改DoT默认尺寸
+     *
+     * @param circleRadius
+     */
+    public void setCircleRadius(float circleRadius) {
+        if (circleRadius > 0)
+            defaultSize = circleRadius * 3;
     }
 
     /**
      * 小圆画笔
      */
     private Paint paint = null;
-    /**
-     * 小圆颜色
-     */
-    private int DefaultColor = 0;
 
     public void setColor(int color) {
-        DefaultColor = color;
         if (paint != null)
             paint.setColor(color);
     }
@@ -109,7 +108,6 @@ public class Dot extends ImageView {
         canvas.restore();
     }
 
-    public static final int DEFAULT_SIZE = 15;
 
     /**
      * 当控件的父元素正要放置该控件时调用
@@ -120,8 +118,8 @@ public class Dot extends ImageView {
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = measureDimension(ABTextUtil.dip2px(getContext(), DEFAULT_SIZE), widthMeasureSpec);
-        int height = measureDimension(ABTextUtil.dip2px(getContext(), DEFAULT_SIZE), heightMeasureSpec);
+        int width = measureDimension(ABTextUtil.dip2px(getContext(), defaultSize), widthMeasureSpec);
+        int height = measureDimension(ABTextUtil.dip2px(getContext(), defaultSize), heightMeasureSpec);
         setMeasuredDimension(width, height);
     }
 
