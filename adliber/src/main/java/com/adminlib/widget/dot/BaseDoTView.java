@@ -55,16 +55,20 @@ public abstract class BaseDoTView extends LinearLayout {
         if (null != attrs) {
             TypedArray arr = context.obtainStyledAttributes(attrs, R.styleable.BaseDoTView);
             try {
+                //被选中小点的颜色
                 int selectedIndicatorColor = arr.getColor(R.styleable.BaseDoTView_selectedIndicatorColor, getResources().getColor(R.color.cl_Grid));
                 this.setSelectedIndicatorColor(selectedIndicatorColor);
+                //未被选中的小点颜色
                 int UnselectedIndicatorColor = arr.getColor(R.styleable.BaseDoTView_unselectedIndicatorColor, getResources().getColor(R.color.cl_gray));
                 this.setUnselectedIndicatorColor(UnselectedIndicatorColor);
+                //小点半径
                 int circleRadius = arr.getInt(R.styleable.BaseDoTView_circleRadius, 0);
                 if (circleRadius > 0)
                     setCircleRadius(circleRadius);
+                //小点数
                 int slideCount = arr.getInt(R.styleable.BaseDoTView_slideCount, 0);
+                //小点位置
                 int selected = arr.getInt(R.styleable.BaseDoTView_selectPosition, 0);
-
                 if (slideCount > 0) {
                     this.initialize(slideCount, selected);
                 }
@@ -72,7 +76,6 @@ public abstract class BaseDoTView extends LinearLayout {
                 arr.recycle();
             }
         }
-        postInvalidate();
     }
 
     /**
