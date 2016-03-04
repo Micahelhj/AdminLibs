@@ -15,7 +15,6 @@ import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
 
-
 import com.adminlibs.R;
 import com.adutils.ABTextUtil;
 
@@ -150,6 +149,12 @@ public class AbListPopupWindow implements OnItemClickListener {
         setData(getEntityData(listString), 0);
     }
 
+    /**
+     * 获取数据（数据组装）
+     *
+     * @param listString
+     * @return
+     */
     private ArrayList<MyPopupWindowData> getEntityData(List<String> listString) {
         ArrayList<MyPopupWindowData> myPopupWindowDatas = new ArrayList<MyPopupWindowData>();
         if (listString == null || listString.size() < 1)
@@ -164,6 +169,12 @@ public class AbListPopupWindow implements OnItemClickListener {
         return myPopupWindowDatas;
     }
 
+    /**
+     * 设置数据
+     *
+     * @param myPopupWindowDatas
+     * @param defaultIndex
+     */
     public void setData(List<MyPopupWindowData> myPopupWindowDatas, int defaultIndex) {
         if (myPopupWindowDatas != null && myPopupWindowDatas.size() != 0) {
             mInsideListAdapter.setData(myPopupWindowDatas);
@@ -172,6 +183,9 @@ public class AbListPopupWindow implements OnItemClickListener {
         }
     }
 
+    /**
+     * 是否显示mPopupWindow
+     */
     public void showPopupWindow() {
         if (mPopupWindow.isShowing())
             mPopupWindow.dismiss();
@@ -203,7 +217,7 @@ public class AbListPopupWindow implements OnItemClickListener {
     }
 
     /**
-     * MyPopupWindow列表适配器
+     * MyPopupWindow列表数据适配器
      */
     private class InsideListAdapter extends BaseAdapter {
         private LayoutInflater layoutInflater;
