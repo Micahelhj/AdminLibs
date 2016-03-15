@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.adminlib.widget.ab;
+package com.adminlib.widget.banner;
 
 import android.content.Context;
 import android.support.v4.view.PagerAdapter;
