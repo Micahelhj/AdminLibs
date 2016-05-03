@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 
 import com.adminlibs.R;
 import com.adutils.ABTextUtil;
+import com.adutils.phone.ABDensityUtil;
 
 /**
  * 项目名称：AdminLibs
@@ -114,8 +115,8 @@ public class Dot extends ImageView {
      */
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int width = measureDimension(ABTextUtil.dip2px(getContext(), defaultSize), widthMeasureSpec);
-        int height = measureDimension(ABTextUtil.dip2px(getContext(), defaultSize), heightMeasureSpec);
+        int width = measureDimension(ABDensityUtil.dip2px(getContext(), defaultSize), widthMeasureSpec);
+        int height = measureDimension(ABDensityUtil.dip2px(getContext(), defaultSize), heightMeasureSpec);
         setMeasuredDimension(width, height);
     }
 

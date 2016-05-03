@@ -17,6 +17,7 @@ import android.widget.TextView;
 
 import com.adminlibs.R;
 import com.adutils.ABTextUtil;
+import com.adutils.phone.ABDensityUtil;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -50,7 +51,7 @@ public class AbListPopupWindow implements OnItemClickListener {
     }
 
     public void setTextSize(float textSize) {
-        TextSize = ABTextUtil.px2sp(context, textSize);
+        TextSize = ABDensityUtil.px2sp(context, textSize);
     }
 
     public int getTextGravity() {
