@@ -7,7 +7,8 @@ import java.io.PrintWriter;
 
 /**
  * 项目名称：AdminLibs
- * 类描述：
+ * 类描述：package 内的jar 可用命令符执行“ Java -jar xx.jar width height width,height_width,height” 生成对应的Values文件
+ * 双击可直接生成已有的values文件
  * 创建人：Michael
  * 创建时间：2016/3/1 11:46
  * 修改人：Michael
